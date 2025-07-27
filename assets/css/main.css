@@ -1,11 +1,9 @@
-
 :root {
   --mainColor: #8490ff;
   --secondaryColor: #62bdfc;
 }
 
-
-/* Navbar Styles */
+/* Navbar */
 .navbar-nav .nav-link {
   transition: color 0.7s ease;
 }
@@ -23,7 +21,54 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Button Styles */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #e5e7eb;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 60px;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #8490ff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+}
+
+.timeline-box {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Button */
 .btn-custom {
   background: linear-gradient(90deg, var(--mainColor), var(--secondaryColor));
   padding: 0 30px;
@@ -51,96 +96,6 @@
   box-shadow: none;
 }
 
-/* Path Section Styles (Used on various sub-pages) */
-.Pathpages {
-  background: linear-gradient(90deg, var(--mainColor), var(--secondaryColor));
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Footer Styles */
-footer.custom-footer {
-  background-color: #04091e;
-  color: #777;
-  padding: 5rem 0;
-}
-
-.custom-footer h5,
-.custom-footer a {
-  color: white;
-}
-
-.custom-footer .btn-light {
-  color: #04091e;
-}
-
-.custom-footer a:hover {
-  color: var(--secondaryColor);
-  text-decoration: underline;
-}
-/* Common Components Styles - End */
-
----
-
-/*
- * CSS for About Page (about.html) - Start
- */
-.timeline {
-  position: relative;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background-color: #e5e7eb;
-  transform: translateX(-50%);
-}
-
-.timeline-item {
-  margin-bottom: 60px;
-}
-
-.timeline-dot {
-  width: 16px;
-  height: 16px;
-  background-color: #8490ff;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  margin: auto;
-}
-
-.timeline-box {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  width: 80px;
-  display: block;
-  margin-bottom: 10px;
-}
-/* CSS for About Page (about.html) - End */
-
----
-
-/*
- * CSS for Services Page (services.html) - Start
- */
 .p-4:hover i,
 .p-4:hover h4 {
   background: linear-gradient(90deg, var(--mainColor), var(--secondaryColor));
@@ -154,130 +109,6 @@ footer.custom-footer {
   background: linear-gradient(90deg, var(--mainColor), var(--secondaryColor));
 }
 
-.custom-plan-section {
-  min-height: 700px;
-}
-
-.bg-plans {
-  background-color: #f9f9ff;
-  border-radius: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-.plan-card {
-  background-color: #f9f9ff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  transition: transform 0.7s ease, box-shadow 0.7s ease, background 0.7s ease;
-  color: #333;
-}
-
-.plan-card .card-body p {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 15px;
-}
-
-.plan-card .card-body ul.list-unstyled li {
-  padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.plan-card .card-body ul.list-unstyled li:last-child {
-  border-bottom: none;
-}
-
-.plan-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background: linear-gradient(to bottom right, #6a8dff, #5fcbff);
-  color: #fff;
-}
-
-.plan-card:hover .card-body,
-.plan-card:hover h5,
-.plan-card:hover p,
-.plan-card:hover ul li,
-.plan-card:hover h4 {
-  color: #fff !important;
-}
-
-.plan-card:hover .card-body p {
-  border-bottom-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.plan-card:hover .card-body ul.list-unstyled li {
-  border-bottom-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.plan-card:hover .circle {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-
-.buy-now-btn {
-  transition: opacity 0.7s ease;
-}
-
-.plan-card:hover .buy-now-btn {
-  display: inline-block !important;
-}
-
-.circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(102, 102, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 18px;
-  color: #333;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-#feedbackSection {
-  background-color: #f9f9ff;
-}
-
-img.rounded-circle {
-  object-fit: cover;
-}
-
-.user-name {
-  cursor: pointer;
-  color: black;
-  transition: all 0.7s ease;
-}
-
-.user-name:hover {
-  background: linear-gradient(90deg, var(--mainColor), var(--secondaryColor));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-/* CSS for Services Page (services.html) - End */
-
----
-
-/*
- * CSS for Portfolio Page (portfolio.html) - Start
- */
 .card-img-top {
   border-radius: 0.5rem;
   object-fit: cover;
@@ -285,13 +116,13 @@ img.rounded-circle {
 }
 
 .list-inline-item a:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 2px;
-  background-color: black;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
 }
 
 .image-overlay-wrapper {
@@ -310,7 +141,7 @@ img.rounded-circle {
 }
 
 .image-overlay-wrapper::after {
-  content: "\f06e"; /* Font Awesome eye icon */
+  content: "\f06e";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 2rem;
@@ -328,61 +159,219 @@ img.rounded-circle {
 .image-overlay-wrapper:hover::after {
   opacity: 1;
 }
-/* CSS for Portfolio Page (portfolio.html) - End */
 
----
-
-/*
- * CSS for Login Page (login.html) - Start
- */
-.login-section input { /* Applies to input fields specifically within the login section */
-  border-radius: 6px;
-  border: 1px solid #dee2e6;
-  padding: 12px;
+img.rounded-circle {
+  object-fit: cover;
 }
 
-.login-section input:focus {
-  border-color: var(--mainColor);
-  box-shadow: 0 0 0 0.2rem rgba(132, 144, 255, 0.25);
-}
-/* CSS for Login Page (login.html) - End */
-
----
-
-/*
- * CSS for Signup Page (signup.html) - Start
- */
-.signup-section input,
-.signup-section select,
-.signup-section textarea { 
-  border-radius: 6px;
-  border: 1px solid #dee2e6;
-  padding: 12px;
+.user-name {
+  cursor: pointer;
+  color: black;
+  transition: all 0.7s ease;
 }
 
-.signup-section input:focus {
-  border-color: var(--mainColor);
-  box-shadow: 0 0 0 0.2rem rgba(132, 144, 255, 0.25);
+#feedbackSection {
+  background-color: #f9f9ff;
 }
 
-.signup-dot {
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  opacity: 0.5;
+.user-name:hover {
+  background: linear-gradient(90deg, var(--mainColor), var(--secondaryColor));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-.signup-dot.active {
+.custom-plan-section {
+  min-height: 700px;
+}
+
+.bg-plans {
+    background-color: #f9f9ff;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.plan-card {
+    background-color: #f9f9ff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    transition: transform 0.7s ease, box-shadow 0.7s ease, background 0.7s ease;
+    color: #333;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-card .card-body p {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.plan-card .card-body ul.list-unstyled li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.plan-card .card-body ul.list-unstyled li:last-child {
+    border-bottom: none;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom right, #6a8dff, #5fcbff);
+    color: #fff;
+}
+
+.plan-card:hover .card-body,
+.plan-card:hover h5,
+.plan-card:hover p,
+.plan-card:hover ul li,
+.plan-card:hover h4 {
+    color: #fff !important;
+}
+
+.plan-card:hover .card-body p {
+    border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.plan-card:hover .card-body ul.list-unstyled li {
+    border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.plan-card:hover .circle {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.buy-now-btn {
+    transition: opacity 0.7s ease;
+}
+
+.plan-card:hover .buy-now-btn {
+    display: inline-block !important;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(102, 102, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.blog-posts {
+    background-color: #f9f9ff;
+}
+
+.blog-posts h2 {
+    color: #333;
+}
+
+.blog-posts p {
+    line-height: 1.6;
+}
+
+.blog-card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h5.card-title:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.blog-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.author-avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.blog-card .card-body h5 {
+    margin-bottom: 0.5rem;
+}
+
+.blog-card .card-body p {
+    font-size: 0.9rem;
+}
+
+.premium-labels-section {
+    background: linear-gradient(to right, #6a8dff, #5fcbff);
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-card {
+    color: #fff;
+}
+
+.label-icon {
+  width: 100px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: filter 0.7s ease, opacity 0.7s ease;
+}
+
+.label-icon:hover {
+  filter: brightness(1.5) invert(0);
   opacity: 1;
 }
-/* CSS for Signup Page (signup.html) - End */
 
----
+/* Path Section */
+.Pathpages {
+  background: linear-gradient(90deg, var(--mainColor), var(--secondaryColor));
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-/*
- * CSS for Contact Page (contact.html) - Start
- */
+/* Contact Section */
 .contact-info-form {
   background-color: #f9f9ff;
   min-height: 500px;
@@ -404,7 +393,7 @@ img.rounded-circle {
   box-shadow: 0 0 0 0.2rem rgba(132, 144, 255, 0.25);
 }
 
-/* Help Cards on Contact Page */
+/* Help Cards */
 .help-option {
   transition: transform 0.7s ease, box-shadow 0.7s ease;
 }
@@ -413,87 +402,53 @@ img.rounded-circle {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
-/* CSS for Contact Page (contact.html) - End */
 
----
-
-/*
- * CSS for Blog Related Sections - Start
- */
-.blog-posts {
-  background-color: #f9f9ff;
+/* Signup & Login input fields */
+.signup-section input,
+.signup-section select,
+.signup-section textarea,
+.login-section input {
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  padding: 12px;
 }
 
-.blog-posts h2 {
-  color: #333;
+.signup-section input:focus,
+.login-section input:focus {
+  border-color: var(--mainColor);
+  box-shadow: 0 0 0 0.2rem rgba(132, 144, 255, 0.25);
 }
 
-.blog-posts p {
-  line-height: 1.6;
+/* Signup dots */
+.signup-dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
 }
 
-.blog-card {
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-}
-
-.blog-card h5.card-title:hover {
-  color: #007bff;
-  cursor: pointer;
-}
-
-.blog-image {
-  height: 200px;
-  object-fit: cover;
-}
-
-.blog-meta {
-  font-size: 0.85rem;
-  color: #6c757d;
-}
-
-.author-avatar {
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-}
-
-.blog-card .card-body h5 {
-  margin-bottom: 0.5rem;
-}
-
-.blog-card .card-body p {
-  font-size: 0.9rem;
-}
-
-.premium-labels-section {
-  background: linear-gradient(to right, #6a8dff, #5fcbff);
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.label-card {
-  color: #fff;
-}
-
-.label-icon {
-  width: 100px;
-  height: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-  transition: filter 0.7s ease, opacity 0.7s ease;
-}
-
-.label-icon:hover {
-  filter: brightness(1.5) invert(0);
+.signup-dot.active {
   opacity: 1;
 }
-/* CSS for Blog Related Sections - End */
+
+/* Footer */
+footer.custom-footer {
+  background-color: #04091e;
+  color: #777;
+  padding: 5rem 0;
+}
+
+.custom-footer h5,
+.custom-footer a {
+  color: white;
+}
+
+.custom-footer .btn-light {
+  color: #04091e;
+}
+
+.custom-footer a:hover {
+  color: var(--secondaryColor);
+  text-decoration: underline;
+}
